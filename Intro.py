@@ -285,7 +285,7 @@ with col1:
     )
 
     st.markdown(
-        '<a class="boton" href="https://yolov5cmc.streamlit.app/" target="_blank">Probar YOLO →</a>',
+        '<a class="boton" href="https://traductorr5d9v9t32kchhniyxnsdos.streamlit.app/" target="_blank">Probar YOLO →</a>',
         unsafe_allow_html=True
     )
 
