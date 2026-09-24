@@ -262,7 +262,7 @@ with col1:
     )
 
     st.markdown(
-        '<a class="boton" href="https://imultimod.streamlit.app/" target="_blank">Probar aplicación →</a>',
+        '<a class="boton" href="https://interfazmultimodal1-paula.streamlit.app/" target="_blank">Probar aplicación →</a>',
         unsafe_allow_html=True
     )
 
