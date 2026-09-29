@@ -285,7 +285,7 @@ with col1:
     )
 
     st.markdown(
-        '<a class="boton" href="https://introstrelit.streamlit.app/" target="_blank">Probar YOLO →</a>',
+        '<a class="boton" href="https://introstrelit.streamlit.app/" target="_blank">Probar Aplicación →</a>',
         unsafe_allow_html=True
     )
 
@@ -325,19 +325,19 @@ with col2:
     st.markdown("""
     <div class="card">
     <span class="tag-purple">🗣️ VOZ</span>
-    <h3>Conversión de voz a texto</h3>
+    <h3>Traductor</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("OIG8.jpg")
     st.image(image, width=200)
 
     st.write(
-        "Explora una aplicación capaz de transformar "
-        "voz en texto mediante Inteligencia Artificial."
+        "Una herramienta interactiva para traducir lo que dices."
+        "Presiona el botón, habla cuando escuches la señal y selecciona el idioma que necesitas."
     )
 
     st.markdown(
-        '<a class="boton" href="https://traductorw.streamlit.app/" target="_blank">Probar aplicación →</a>',
+        '<a class="boton" https://traductorr5d9v9t32kchhniyxnsdos.streamlit.app/" target="_blank">Probar aplicación →</a>',
         unsafe_allow_html=True
     )
 
