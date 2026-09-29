@@ -446,19 +446,19 @@ with col3:
     st.markdown("""
     <div class="card">
     <span class="tag-yellow">⚙️ INTERACCIÓN</span>
-    <h3>Sistema Ciberfísico</h3>
+    <h3>AI Lab — Explorando la Inteligencia Artificial</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("OIG6.jpg")
     st.image(image, width=200)
 
     st.write(
-        "Explora la interacción entre la Inteligencia Artificial "
-        "y el mundo físico."
+        "Un laboratorio interactivo donde puedes explorar aplicaciones de "
+        " IA para texto, voz, imágenes, datos y mucho más."
     )
 
     st.markdown(
-        '<a class="boton" href="https://vision2-gpt4o.streamlit.app/" target="_blank">Ver aplicación →</a>',
+        '<a class="boton" href="https://tm59m47cvqpdasyxtsnmy3pk.streamlit.app/" target="_blank">Probar aplicación →</a>',
         unsafe_allow_html=True
     )
 
