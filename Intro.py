@@ -314,6 +314,28 @@ with col1:
 
     st.markdown("</div>", unsafe_allow_html=True)
 
+# TARJETA 1
+    st.markdown("""
+    <div class="card">
+    <span class="tag-yellow">🎙️ CHAT</span>
+    <h3>CDetective de sentimiento</h3>
+    """, unsafe_allow_html=True)
+
+    image = Image.open("txt_to_audio2.png")
+    st.image(image, width=190)
+
+    st.write(
+        "¿Quieres saber como te sientes? "
+        "Este detective encontrará todos tus sentimientos"
+    )
+
+    st.markdown(
+        '<a class="boton" href="https://sentimenta-kkcpxrndzcrh4vzxjuoyik.streamlit.app/" target="_blank">Probar aplicación →</a>',
+        unsafe_allow_html=True
+    )
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
 
 # ==================================================
 # COLUMNA 2
