@@ -400,7 +400,7 @@ with col3:
     st.markdown("""
     <div class="card">
     <span class="tag-yellow">🧠 CÁMARA</span>
-    <h3>isionScan: Detección Inteligente de Objetos</h3>
+    <h3>VisionScan: Detección Inteligente de Objetos</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("Chat_pdf.png")
@@ -422,20 +422,20 @@ with col3:
     # TARJETA 8
     st.markdown("""
     <div class="card">
-    <span class="tag-purple">👁️ IMÁGENES</span>
-    <h3>Análisis de Imagen</h3>
+    <span class="tag-purple">👁️ CHAT</span>
+    <h3>TextDetective: Buscador de Pistas</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("OIG4.jpg")
     st.image(image, width=200)
 
     st.write(
-        "Explora la capacidad de la Inteligencia Artificial "
-        "para analizar e interpretar imágenes."
+        "Analiza documentos y encuentra la pista más relacionada"
+        " con tu pregunta mediante TF-IDF y similitud de textos."
     )
 
     st.markdown(
-        '<a class="boton" href="https://vision2-gpt4o.streamlit.app/" target="_blank">Analizar imagen →</a>',
+        '<a class="boton" href="https://questanswer-qnpwbc5jnzurzcdjfnrzzp.streamlit.app/" target="_blank">Probar aplicacion →</a>',
         unsafe_allow_html=True
     )
 
