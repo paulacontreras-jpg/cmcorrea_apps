@@ -183,9 +183,7 @@ with st.sidebar:
 
     st.write("🎙️ Conversión de voz")
     st.write("👁️ Reconocimiento de imágenes")
-    st.write("📊 Análisis de datos")
     st.write("📄 Análisis de documentos")
-    st.write("🧠 Entrenamiento de modelos")
     st.write("🔊 Transcripción de audio")
 
 
