@@ -347,20 +347,20 @@ with col2:
     # TARJETA 5
     st.markdown("""
     <div class="card">
-    <span class="tag-yellow">📊 DATOS</span>
-    <h3>Análisis de Datos</h3>
+    <span class="tag-yellow">🧠 CÁMARA</span>
+    <h3>LumiTranslate</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("data_analisis.png")
     st.image(image, width=190)
 
     st.write(
-        "Descubre cómo utilizar agentes de Inteligencia Artificial "
-        "para analizar diferentes tipos de datos."
+        "Convierte imágenes en texto y traduce su contenido a diferentes "
+        " idiomas con ayuda de la inteligencia artificial."
     )
 
     st.markdown(
-        '<a class="boton" href="https://dataagente.streamlit.app/" target="_blank">Analizar datos →</a>',
+        '<a class="boton" href="https://ocr-audio-wvhaldww4dn4zze8kltksm.streamlit.app/" target="_blank">Analizar datos →</a>',
         unsafe_allow_html=True
     )
 
