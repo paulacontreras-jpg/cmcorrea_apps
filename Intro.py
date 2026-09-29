@@ -272,20 +272,20 @@ with col1:
     # TARJETA 2
     st.markdown("""
     <div class="card">
-    <span class="tag-purple">👁️ VISIÓN</span>
-    <h3>Reconocimiento de Objetos</h3>
+    <span class="tag-purple">🌟 CHAT</span>
+    <h3>INTRO: Mi mood de hoy</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("txt_to_audio.png")
     st.image(image, width=200)
 
     st.write(
-        "Observa cómo la Inteligencia Artificial puede detectar "
-        "y reconocer diferentes objetos dentro de una imagen."
+        "Un espacio interactivo para compartir mi estado de ánimo,"
+        "explorar emociones y descubrir qué tan relatable es mi mood del día."
     )
 
     st.markdown(
-        '<a class="boton" href="https://traductorr5d9v9t32kchhniyxnsdos.streamlit.app/" target="_blank">Probar YOLO →</a>',
+        '<a class="boton" href="https://introstrelit.streamlit.app/" target="_blank">Probar YOLO →</a>',
         unsafe_allow_html=True
     )
 
