@@ -370,20 +370,20 @@ with col2:
     # TARJETA 6
     st.markdown("""
     <div class="card">
-    <span class="tag-purple">📝 AUDIO / VIDEO</span>
-    <h3>Transcriptor de Audio y Video</h3>
+    <span class="tag-purple">📝 CHAT</span>
+    <h3>WordCloud: Laboratorio de Palabras</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("OIG3.jpg")
     st.image(image, width=200)
 
     st.write(
-        "Realiza transcripciones automáticas de archivos "
-        "de audio y video."
+        "Explora un texto, identifica las palabras más frecuentes y conviértelas en una nube visual. "
+        "Personaliza colores, formas y filtros para descubrir los patrones principales de cualquier contenido."
     )
 
     st.markdown(
-        '<a class="boton" href="https://transcript-whisper.streamlit.app/" target="_blank">Transcribir →</a>',
+        '<a class="boton" href="https://wordcloud-8xcyhnovzzx3urhzjdvxcf.streamlit.app/" target="_blank">Probar aplicación →</a>',
         unsafe_allow_html=True
     )
 
