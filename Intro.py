@@ -1,3 +1,4 @@
+```python
 import streamlit as st
 from PIL import Image
 
@@ -18,141 +19,350 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-    /* Fondo general */
+    /* ==================================================
+       FONDO GENERAL
+    ================================================== */
+
     .stApp {
-        background: #FFFDF5;
+        background: #FFFDF7;
     }
 
-    /* Barra lateral */
+    /* Ocultar espacio superior excesivo */
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+
+    /* ==================================================
+       BARRA LATERAL
+    ================================================== */
+
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #5B2A86 0%, #7B3FB5 100%);
+        background: linear-gradient(
+            180deg,
+            #51247A 0%,
+            #7139A3 55%,
+            #8B4FCB 100%
+        );
     }
 
     [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] h3,
-    [data-testid="stSidebar"] p {
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] span {
         color: white;
     }
 
-    /* Título principal */
+
+    /* ==================================================
+       TÍTULO PRINCIPAL
+    ================================================== */
+
     .titulo {
-        background: linear-gradient(90deg, #5B2A86, #8B4FCB);
+        background: linear-gradient(
+            135deg,
+            #542580 0%,
+            #7540A5 55%,
+            #8D51C9 100%
+        );
+
         color: white;
-        padding: 35px;
-        border-radius: 25px;
+        padding: 38px 35px;
+        border-radius: 28px;
         text-align: center;
         margin-bottom: 25px;
-        box-shadow: 0px 8px 20px rgba(91, 42, 134, 0.20);
+
+        box-shadow:
+            0 12px 30px rgba(91, 42, 134, 0.18);
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .titulo::after {
+        content: "✦";
+        position: absolute;
+        right: 35px;
+        top: 18px;
+        font-size: 40px;
+        color: #F9D95C;
+        opacity: 0.8;
     }
 
     .titulo h1 {
-        font-size: 42px;
-        margin-bottom: 8px;
+        font-size: 40px;
+        margin: 0 0 10px 0;
+        font-weight: 800;
     }
 
     .titulo p {
-        font-size: 18px;
+        font-size: 17px;
         margin: 0;
+        opacity: 0.95;
     }
 
-    /* Sección del enlace */
+
+    /* ==================================================
+       INTRO
+    ================================================== */
+
     .intro {
-        background: #FFF1A8;
+        background: linear-gradient(
+            135deg,
+            #FFF6C7,
+            #FFF0A0
+        );
+
         padding: 20px 25px;
-        border-radius: 18px;
-        margin: 20px 0 30px 0;
-        border-left: 8px solid #F2C94C;
+        border-radius: 20px;
+        margin: 20px 0 15px 0;
+
+        border-left: 7px solid #F2C94C;
+
+        box-shadow:
+            0 5px 15px rgba(180, 145, 30, 0.10);
     }
 
     .intro h3 {
         color: #4A206B;
-        margin-bottom: 5px;
-    }
-
-    /* Tarjetas */
-    .card {
-        background: white;
-        border-radius: 20px;
-        padding: 20px;
-        margin-bottom: 25px;
-        min-height: 330px;
-        box-shadow: 0px 5px 18px rgba(70, 40, 100, 0.12);
-        border: 2px solid #EEE5F5;
-        transition: 0.3s;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 10px 25px rgba(91, 42, 134, 0.20);
-    }
-
-    .card h3 {
-        color: #5B2A86;
+        margin: 0 0 6px 0;
         font-size: 21px;
-        margin-bottom: 10px;
     }
 
-    .card p {
-        color: #555555;
+    .intro p {
+        color: #5F511B;
+        margin: 0;
         font-size: 15px;
         line-height: 1.5;
     }
 
-    /* Etiquetas */
+
+    /* ==================================================
+       DECORACIÓN
+    ================================================== */
+
+    .decoracion {
+        color: #E6B72D;
+        font-size: 22px;
+        text-align: center;
+        margin: 18px 0;
+        letter-spacing: 8px;
+    }
+
+
+    /* ==================================================
+       TARJETAS
+    ================================================== */
+
+    /*
+       Cada columna contiene los elementos que forman una tarjeta.
+       Usamos el contenedor vertical de Streamlit para darle
+       apariencia de tarjeta completa.
+    */
+
+    [data-testid="stVerticalBlock"] {
+        gap: 0.45rem;
+    }
+
+    /* Imagen */
+
+    [data-testid="stImage"] {
+        background: white;
+        border-radius: 16px;
+        padding: 8px;
+        margin: 4px 0 8px 0;
+
+        box-shadow:
+            0 4px 14px rgba(70, 40, 100, 0.08);
+    }
+
+    [data-testid="stImage"] img {
+        border-radius: 12px;
+        max-height: 170px;
+        object-fit: contain;
+    }
+
+
+    /* Texto de las tarjetas */
+
+    .card-text {
+        background: white;
+        color: #555555;
+
+        padding: 0 20px 5px 20px;
+
+        font-size: 14.5px;
+        line-height: 1.55;
+
+        min-height: 75px;
+    }
+
+
+    /* ==================================================
+       TÍTULOS DE TARJETAS
+    ================================================== */
+
+    .card-title {
+        background: white;
+        color: #542580;
+
+        font-size: 20px;
+        font-weight: 750;
+
+        padding: 5px 20px 2px 20px;
+
+        line-height: 1.2;
+    }
+
+
+    /* ==================================================
+       ETIQUETAS
+    ================================================== */
+
     .tag-purple {
         display: inline-block;
-        background: #E8D8F5;
+
+        background: #E9D9F7;
         color: #5B2A86;
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: bold;
-        margin-bottom: 10px;
+
+        padding: 6px 12px;
+        border-radius: 30px;
+
+        font-size: 11px;
+        font-weight: 800;
+
+        letter-spacing: 0.4px;
+        margin: 8px 20px 2px 20px;
     }
 
     .tag-yellow {
         display: inline-block;
-        background: #FFF1A8;
-        color: #735900;
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: bold;
-        margin-bottom: 10px;
+
+        background: #FFF0A3;
+        color: #705600;
+
+        padding: 6px 12px;
+        border-radius: 30px;
+
+        font-size: 11px;
+        font-weight: 800;
+
+        letter-spacing: 0.4px;
+        margin: 8px 20px 2px 20px;
     }
 
-    /* Botones */
+
+    /* ==================================================
+       BOTONES
+    ================================================== */
+
     .boton {
         display: inline-block;
+
         background: #5B2A86;
         color: white !important;
+
         text-decoration: none;
-        padding: 9px 18px;
+
+        padding: 10px 18px;
         border-radius: 12px;
-        font-weight: bold;
-        margin-top: 8px;
+
+        font-size: 13px;
+        font-weight: 700;
+
+        margin: 8px 20px 20px 20px;
+
+        transition: all 0.25s ease;
+
+        box-shadow:
+            0 4px 10px rgba(91, 42, 134, 0.18);
     }
 
     .boton:hover {
         background: #F2C94C;
         color: #4A206B !important;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 7px 15px rgba(242, 201, 76, 0.30);
     }
 
-    /* Decoraciones */
-    .decoracion {
-        color: #F2C94C;
-        font-size: 28px;
-        text-align: center;
-        margin: 5px;
+
+    /* ==================================================
+       CONTENEDORES DE TARJETAS
+    ================================================== */
+
+    .card-start {
+        background: white;
+
+        border: 1px solid #E9DDF2;
+        border-radius: 22px 22px 0 0;
+
+        padding-top: 3px;
+
+        box-shadow:
+            0 5px 18px rgba(70, 40, 100, 0.09);
     }
 
-    /* Footer */
+    .card-end {
+        background: white;
+
+        border-radius: 0 0 22px 22px;
+
+        box-shadow:
+            0 8px 18px rgba(70, 40, 100, 0.09);
+
+        margin-bottom: 24px;
+    }
+
+
+    /* ==================================================
+       SEPARADORES
+    ================================================== */
+
+    .card-divider {
+        height: 1px;
+        background: #EEE6F5;
+        margin: 8px 20px;
+    }
+
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
     .footer {
         text-align: center;
-        color: #7B3FB5;
-        margin-top: 30px;
-        padding: 20px;
+
+        color: #76519A;
+
+        margin-top: 35px;
+        padding: 25px;
+
         font-size: 14px;
+    }
+
+    .footer small {
+        color: #9A83B0;
+    }
+
+
+    /* ==================================================
+       RESPONSIVE
+    ================================================== */
+
+    @media (max-width: 900px) {
+
+        .titulo h1 {
+            font-size: 32px;
+        }
+
+        .titulo {
+            padding: 30px 20px;
+        }
+
     }
 
 </style>
@@ -199,7 +409,7 @@ st.markdown("""
 <h1>🤖 Aplicaciones de Inteligencia Artificial</h1>
 
 <p>
-Explora diferentes herramientas y aplicaciones prácticas de IA
+Explora herramientas y proyectos interactivos creados con Inteligencia Artificial
 </p>
 
 </div>
@@ -218,7 +428,7 @@ st.markdown("""
 <h3>✨ Explora más aplicaciones</h3>
 
 <p>
-En el siguiente enlace puedes encontrar páginas y ejercicios prácticos
+Encuentra páginas, experimentos y ejercicios prácticos
 relacionados con Inteligencia Artificial.
 </p>
 
@@ -226,18 +436,70 @@ relacionados con Inteligencia Artificial.
 """, unsafe_allow_html=True)
 
 st.markdown(
-    f'<a class="boton" href="{url_ia}" target="_blank">🔗 Ver páginas y ejercicios</a>',
+    f'''
+    <a class="boton" href="{url_ia}" target="_blank">
+        🔗 Ver páginas y ejercicios
+    </a>
+    ''',
     unsafe_allow_html=True
 )
 
-st.markdown("<div class='decoracion'>◆ ◇ ◆</div>", unsafe_allow_html=True)
+st.markdown(
+    "<div class='decoracion'>◆ ◇ ◆</div>",
+    unsafe_allow_html=True
+)
+
+
+# --------------------------------------------------
+# FUNCIÓN PARA CREAR TARJETAS
+# --------------------------------------------------
+
+def tarjeta(tag, tipo, titulo, imagen, descripcion, url):
+
+    if tipo == "yellow":
+        tag_html = f'<span class="tag-yellow">{tag}</span>'
+    else:
+        tag_html = f'<span class="tag-purple">{tag}</span>'
+
+    st.markdown(
+        f"""
+        <div class="card-start">
+            {tag_html}
+            <div class="card-title">{titulo}</div>
+            <div class="card-divider"></div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Imagen
+    image = Image.open(imagen)
+    st.image(image, use_container_width=True)
+
+    # Descripción
+    st.markdown(
+        f'<div class="card-text">{descripcion}</div>',
+        unsafe_allow_html=True
+    )
+
+    # Botón
+    st.markdown(
+        f'''
+        <div class="card-end">
+            <a class="boton" href="{url}" target="_blank">
+                Probar aplicación →
+            </a>
+        </div>
+        ''',
+        unsafe_allow_html=True
+    )
 
 
 # --------------------------------------------------
 # COLUMNAS
 # --------------------------------------------------
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns(3, gap="large")
 
 
 # ==================================================
@@ -246,73 +508,32 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
 
-    # TARJETA 1
-    st.markdown("""
-    <div class="card">
-    <span class="tag-yellow">🎙️ AUDIO</span>
-    <h3>Conversión de texto a voz</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("txt_to_audio2.png")
-    st.image(image, width=190)
-
-    st.write(
-        "Convierte texto escrito en voz utilizando una aplicación "
-        "basada en Inteligencia Artificial."
+    tarjeta(
+        "🎙️ AUDIO",
+        "yellow",
+        "Conversión de texto a voz",
+        "txt_to_audio2.png",
+        "Convierte texto escrito en voz utilizando una aplicación basada en Inteligencia Artificial.",
+        "https://interfazmultimodal1-paula.streamlit.app/"
     )
 
-    st.markdown(
-        '<a class="boton" href="https://interfazmultimodal1-paula.streamlit.app/" target="_blank">Probar aplicación →</a>',
-        unsafe_allow_html=True
+    tarjeta(
+        "🌟 CHAT",
+        "purple",
+        "INTRO: Mi mood de hoy",
+        "txt_to_audio.png",
+        "Un espacio interactivo para compartir mi estado de ánimo, explorar emociones y descubrir qué tan relatable es mi mood del día.",
+        "https://introstrelit.streamlit.app/"
     )
 
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-    # TARJETA 2
-    st.markdown("""
-    <div class="card">
-    <span class="tag-purple">🌟 CHAT</span>
-    <h3>INTRO: Mi mood de hoy</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("txt_to_audio.png")
-    st.image(image, width=200)
-
-    st.write(
-        "Un espacio interactivo para compartir mi estado de ánimo,"
-        "explorar emociones y descubrir qué tan relatable es mi mood del día."
+    tarjeta(
+        "🧠 CÁMARA",
+        "yellow",
+        "Reconocimiento Óptico de Caracteres",
+        "OIG5.jpg",
+        "Convierte imágenes en texto de forma rápida y sencilla. Sube o toma una fotografía y el sistema reconocerá automáticamente las palabras que contiene.",
+        "https://4di4tgzegjkvtdx98nnspw.streamlit.app/"
     )
-
-    st.markdown(
-        '<a class="boton" href="https://introstrelit.streamlit.app/" target="_blank">Probar Aplicación →</a>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-    # TARJETA 3
-    st.markdown("""
-    <div class="card">
-    <span class="tag-yellow">🧠 CÁMARA</span>
-    <h3>RECONOCIMIENTO ÓPTICO DE CARACTERES</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("OIG5.jpg")
-    st.image(image, width=200)
-
-    st.write(
-        "Convierte imágenes en texto de forma rápida y sencilla. "
-        "Sube o toma una fotografía de un documento, texto o imagen y el sistema reconocerá automáticamente las palabras que contiene."
-    )
-
-    st.markdown(
-        '<a class="boton" href="https://4di4tgzegjkvtdx98nnspw.streamlit.app/" target="_blank">Probar modelo →</a>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown("</div>", unsafe_allow_html=True)
 
 
 # ==================================================
@@ -321,73 +542,32 @@ with col1:
 
 with col2:
 
-    # TARJETA 4
-    st.markdown("""
-    <div class="card">
-    <span class="tag-purple">🗣️ VOZ</span>
-    <h3>Traductor</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("OIG8.jpg")
-    st.image(image, width=200)
-
-    st.write(
-        "Una herramienta interactiva para traducir lo que dices."
-        "Presiona el botón, habla cuando escuches la señal y selecciona el idioma que necesitas."
+    tarjeta(
+        "🗣️ VOZ",
+        "purple",
+        "Traductor",
+        "OIG8.jpg",
+        "Una herramienta interactiva para traducir lo que dices. Presiona el botón, habla cuando escuches la señal y selecciona el idioma que necesitas.",
+        "https://traductorr5d9v9t32kchhniyxnsdos.streamlit.app/"
     )
 
-    st.markdown(
-        '<a class="boton" href="https://traductorr5d9v9t32kchhniyxnsdos.streamlit.app/" target="_blank">Probar aplicación →</a>',
-        unsafe_allow_html=True
+    tarjeta(
+        "🧠 CÁMARA",
+        "yellow",
+        "LumiTranslate",
+        "data_analisis.png",
+        "Convierte imágenes en texto y traduce su contenido a diferentes idiomas con ayuda de la inteligencia artificial.",
+        "https://ocr-audio-wvhaldww4dn4zze8kltksm.streamlit.app/"
     )
 
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-    # TARJETA 5
-    st.markdown("""
-    <div class="card">
-    <span class="tag-yellow">🧠 CÁMARA</span>
-    <h3>LumiTranslate</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("data_analisis.png")
-    st.image(image, width=190)
-
-    st.write(
-        "Convierte imágenes en texto y traduce su contenido a diferentes "
-        " idiomas con ayuda de la inteligencia artificial."
+    tarjeta(
+        "📝 CHAT",
+        "purple",
+        "WordCloud: Laboratorio de Palabras",
+        "OIG3.jpg",
+        "Explora un texto, identifica las palabras más frecuentes y conviértelas en una nube visual. Personaliza colores, formas y filtros para descubrir patrones.",
+        "https://wordcloud-8xcyhnovzzx3urhzjdvxcf.streamlit.app/"
     )
-
-    st.markdown(
-        '<a class="boton" href="https://ocr-audio-wvhaldww4dn4zze8kltksm.streamlit.app/" target="_blank">Probar aplicación →</a>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-    # TARJETA 6
-    st.markdown("""
-    <div class="card">
-    <span class="tag-purple">📝 CHAT</span>
-    <h3>WordCloud: Laboratorio de Palabras</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("OIG3.jpg")
-    st.image(image, width=200)
-
-    st.write(
-        "Explora un texto, identifica las palabras más frecuentes y conviértelas en una nube visual. "
-        "Personaliza colores, formas y filtros para descubrir los patrones principales de cualquier contenido."
-    )
-
-    st.markdown(
-        '<a class="boton" href="https://wordcloud-8xcyhnovzzx3urhzjdvxcf.streamlit.app/" target="_blank">Probar aplicación →</a>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown("</div>", unsafe_allow_html=True)
 
 
 # ==================================================
@@ -396,73 +576,32 @@ with col2:
 
 with col3:
 
-    # TARJETA 7
-    st.markdown("""
-    <div class="card">
-    <span class="tag-yellow">🧠 CÁMARA</span>
-    <h3>VisionScan: Detección Inteligente de Objetos</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("Chat_pdf.png")
-    st.image(image, width=190)
-
-    st.write(
-        "Utiliza visión artificial para identificar objetos en  "
-        "imágenes capturadas con la cámara y visualizar sus resultados en tiempo real."
+    tarjeta(
+        "🧠 CÁMARA",
+        "yellow",
+        "VisionScan: Detección Inteligente de Objetos",
+        "Chat_pdf.png",
+        "Utiliza visión artificial para identificar objetos en imágenes capturadas con la cámara y visualizar sus resultados en tiempo real.",
+        "https://yolov5-bhfvwptkqgplobjtsjr8xj.streamlit.app/"
     )
 
-    st.markdown(
-        '<a class="boton" href="https://yolov5-bhfvwptkqgplobjtsjr8xj.streamlit.app/" target="_blank">Probar aplicación →</a>',
-        unsafe_allow_html=True
+    tarjeta(
+        "👁️ CHAT",
+        "purple",
+        "TextDetective: Buscador de Pistas",
+        "OIG4.jpg",
+        "Analiza documentos y encuentra la pista más relacionada con tu pregunta mediante TF-IDF y similitud de textos.",
+        "https://questanswer-qnpwbc5jnzurzcdjfnrzzp.streamlit.app/"
     )
 
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-    # TARJETA 8
-    st.markdown("""
-    <div class="card">
-    <span class="tag-purple">👁️ CHAT</span>
-    <h3>TextDetective: Buscador de Pistas</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("OIG4.jpg")
-    st.image(image, width=200)
-
-    st.write(
-        "Analiza documentos y encuentra la pista más relacionada"
-        " con tu pregunta mediante TF-IDF y similitud de textos."
+    tarjeta(
+        "⚙️ INTERACCIÓN",
+        "yellow",
+        "AI Lab — Explorando la Inteligencia Artificial",
+        "OIG6.jpg",
+        "Un laboratorio interactivo donde puedes explorar aplicaciones de IA para texto, voz, imágenes, datos y mucho más.",
+        "https://tm59m47cvqpdasyxtsnmy3pk.streamlit.app/"
     )
-
-    st.markdown(
-        '<a class="boton" href="https://questanswer-qnpwbc5jnzurzcdjfnrzzp.streamlit.app/" target="_blank">Probar aplicacion →</a>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-    # TARJETA 9
-    st.markdown("""
-    <div class="card">
-    <span class="tag-yellow">⚙️ INTERACCIÓN</span>
-    <h3>AI Lab — Explorando la Inteligencia Artificial</h3>
-    """, unsafe_allow_html=True)
-
-    image = Image.open("OIG6.jpg")
-    st.image(image, width=200)
-
-    st.write(
-        "Un laboratorio interactivo donde puedes explorar aplicaciones de "
-        " IA para texto, voz, imágenes, datos y mucho más."
-    )
-
-    st.markdown(
-        '<a class="boton" href="https://tm59m47cvqpdasyxtsnmy3pk.streamlit.app/" target="_blank">Probar aplicación →</a>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown("</div>", unsafe_allow_html=True)
 
 
 # --------------------------------------------------
@@ -471,9 +610,17 @@ with col3:
 
 st.markdown("""
 <div class="footer">
+
     <div class="decoracion">◆ ◇ ◆</div>
+
     🤖 Explorando las posibilidades de la Inteligencia Artificial
+
     <br>
-    <small>Aplicaciones y ejercicios prácticos</small>
+
+    <small>
+        Aplicaciones y ejercicios prácticos
+    </small>
+
 </div>
 """, unsafe_allow_html=True)
+```
