@@ -360,7 +360,7 @@ with col2:
     )
 
     st.markdown(
-        '<a class="boton" href="https://ocr-audio-wvhaldww4dn4zze8kltksm.streamlit.app/" target="_blank">Analizar datos →</a>',
+        '<a class="boton" href="https://ocr-audio-wvhaldww4dn4zze8kltksm.streamlit.app/" target="_blank">Probar aplicación →</a>',
         unsafe_allow_html=True
     )
 
