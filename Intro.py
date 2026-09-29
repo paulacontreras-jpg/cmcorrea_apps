@@ -253,7 +253,7 @@ with col1:
     <h3>Conversión de texto a voz</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("txt_to_audio2.png")
+    image = Image.open("talk.jfif")
     st.image(image, width=190)
 
     st.write(
@@ -276,7 +276,7 @@ with col1:
     <h3>INTRO: Mi mood de hoy</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("txt_to_audio.png")
+    image = Image.open("mood.jfif")
     st.image(image, width=200)
 
     st.write(
@@ -299,7 +299,7 @@ with col1:
     <h3>RECONOCIMIENTO ÓPTICO DE CARACTERES</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("OIG5.jpg")
+    image = Image.open("charc.jfif")
     st.image(image, width=200)
 
     st.write(
@@ -318,10 +318,10 @@ with col1:
     st.markdown("""
     <div class="card">
     <span class="tag-yellow">🎙️ CHAT</span>
-    <h3>CDetective de sentimiento</h3>
+    <h3>Detective de sentimientos</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("txt_to_audio2.png")
+    image = Image.open("feeling.jfif")
     st.image(image, width=190)
 
     st.write(
@@ -350,7 +350,7 @@ with col2:
     <h3>Traductor</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("OIG8.jpg")
+    image = Image.open("traductor.jfif")
     st.image(image, width=200)
 
     st.write(
@@ -373,7 +373,7 @@ with col2:
     <h3>LumiTranslate</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("data_analisis.png")
+    image = Image.open("translate.jfif")
     st.image(image, width=190)
 
     st.write(
@@ -396,7 +396,7 @@ with col2:
     <h3>WordCloud: Laboratorio de Palabras</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("OIG3.jpg")
+    image = Image.open("cloud.jfif")
     st.image(image, width=200)
 
     st.write(
@@ -425,7 +425,7 @@ with col3:
     <h3>VisionScan: Detección Inteligente de Objetos</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("Chat_pdf.png")
+    image = Image.open("vision.jfif")
     st.image(image, width=190)
 
     st.write(
@@ -448,7 +448,7 @@ with col3:
     <h3>TextDetective: Buscador de Pistas</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("OIG4.jpg")
+    image = Image.open("detec.jfif")
     st.image(image, width=200)
 
     st.write(
@@ -471,7 +471,7 @@ with col3:
     <h3>AI Lab — Explorando la Inteligencia Artificial</h3>
     """, unsafe_allow_html=True)
 
-    image = Image.open("OIG6.jpg")
+    image = Image.open("scientist.jfif")
     st.image(image, width=200)
 
     st.write(
