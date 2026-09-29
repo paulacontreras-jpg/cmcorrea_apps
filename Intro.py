@@ -399,20 +399,20 @@ with col3:
     # TARJETA 7
     st.markdown("""
     <div class="card">
-    <span class="tag-yellow">📄 DOCUMENTOS</span>
-    <h3>Generación en Contexto</h3>
+    <span class="tag-yellow">🧠 CÁMARA</span>
+    <h3>isionScan: Detección Inteligente de Objetos</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("Chat_pdf.png")
     st.image(image, width=190)
 
     st.write(
-        "Utiliza RAG para interactuar con la información "
-        "contenida dentro de un documento PDF."
+        "Utiliza visión artificial para identificar objetos en  "
+        "imágenes capturadas con la cámara y visualizar sus resultados en tiempo real."
     )
 
     st.markdown(
-        '<a class="boton" href="https://chatpdf-cc.streamlit.app/" target="_blank">Probar RAG →</a>',
+        '<a class="boton" href="https://yolov5-bhfvwptkqgplobjtsjr8xj.streamlit.app/" target="_blank">Probar aplicación →</a>',
         unsafe_allow_html=True
     )
 
