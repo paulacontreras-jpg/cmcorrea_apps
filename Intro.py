@@ -295,20 +295,20 @@ with col1:
     # TARJETA 3
     st.markdown("""
     <div class="card">
-    <span class="tag-yellow">🧠 MODELOS</span>
-    <h3>Entrenando Modelos</h3>
+    <span class="tag-yellow">🧠 CÁMARA</span>
+    <h3>RECONOCIMIENTO ÓPTICO DE CARACTERES</h3>
     """, unsafe_allow_html=True)
 
     image = Image.open("OIG5.jpg")
     st.image(image, width=200)
 
     st.write(
-        "Conoce cómo utilizar un modelo de Inteligencia Artificial "
-        "después de haberlo entrenado."
+        "Convierte imágenes en texto de forma rápida y sencilla. "
+        "Sube o toma una fotografía de un documento, texto o imagen y el sistema reconocerá automáticamente las palabras que contiene."
     )
 
     st.markdown(
-        '<a class="boton" href="https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/" target="_blank">Probar modelo →</a>',
+        '<a class="boton" href="https://4di4tgzegjkvtdx98nnspw.streamlit.app/" target="_blank">Probar modelo →</a>',
         unsafe_allow_html=True
     )
 
