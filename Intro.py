@@ -337,7 +337,7 @@ with col2:
     )
 
     st.markdown(
-        '<a class="boton" https://traductorr5d9v9t32kchhniyxnsdos.streamlit.app/" target="_blank">Probar aplicación →</a>',
+        '<a class="boton" href="https://traductorr5d9v9t32kchhniyxnsdos.streamlit.app/" target="_blank">Probar aplicación →</a>',
         unsafe_allow_html=True
     )
 
