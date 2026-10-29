@@ -108,10 +108,10 @@ APLICACIONES = [
     # ---------- 8 TARJETAS NUEVAS PARA EDITAR ----------
     {
         "tag": "✏️ EDITAR", "color": "purple",
-        "titulo": "EDITAR: Título 11",
+        "titulo": "La Biblioteca Mágica: Chat con tu PDF",
         "imagen": None, "emoji": "✨",
-        "descripcion": "EDITAR: escribe aquí la descripción de la aplicación.",
-        "url": "https://",
+        "descripcion": "Aplicación que lee el PDF que subas y responde tus preguntas usando únicamente la información del documento, gracias a la tecnología RAG y la inteligencia artificial.",
+        "url": "https://chatpdf-9qhxbvrpmrxcdsznymwbpn.streamlit.app/",
         "boton": "Probar aplicación →",
     },
     {
