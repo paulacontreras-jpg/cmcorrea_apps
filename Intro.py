@@ -116,10 +116,10 @@ APLICACIONES = [
     },
     {
         "tag": "✏️ EDITAR", "color": "yellow",
-        "titulo": "EDITAR: Título 12",
+        "titulo": "Digit Arcade: ¡Dibuja y la IA adivina!",
         "imagen": None, "emoji": "✨",
-        "descripcion": "EDITAR: escribe aquí la descripción de la aplicación.",
-        "url": "https://",
+        "descripcion": "Dibuja un número del 0 al 9 en la pantalla y una red neuronal (CNN) entrenada con MNIST adivina qué dígito es, mostrando su nivel de confianza y las probabilidades de cada número.",
+        "url": "https://mnistpred-adjkknbhfeol8pof3jysaz.streamlit.app/",
         "boton": "Probar aplicación →",
     },
     {
