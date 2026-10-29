@@ -109,7 +109,7 @@ APLICACIONES = [
     {
         "tag": "✏️ EDITAR", "color": "purple",
         "titulo": "La Biblioteca Mágica: Chat con tu PDF",
-        "imagen": None, "emoji": "✨",
+        "imagen": "1.jpeg", "emoji": "✨",
         "descripcion": "Aplicación que lee el PDF que subas y responde tus preguntas usando únicamente la información del documento, gracias a la tecnología RAG y la inteligencia artificial.",
         "url": "https://chatpdf-9qhxbvrpmrxcdsznymwbpn.streamlit.app/",
         "boton": "Probar aplicación →",
@@ -117,7 +117,7 @@ APLICACIONES = [
     {
         "tag": "✏️ EDITAR", "color": "yellow",
         "titulo": "Digit Arcade: ¡Dibuja y la IA adivina!",
-        "imagen": None, "emoji": "✨",
+        "imagen": "2.jpeg", "emoji": "✨",
         "descripcion": "Dibuja un número del 0 al 9 en la pantalla y una red neuronal (CNN) entrenada con MNIST adivina qué dígito es, mostrando su nivel de confianza y las probabilidades de cada número.",
         "url": "https://mnistpred-adjkknbhfeol8pof3jysaz.streamlit.app/",
         "boton": "Probar aplicación →",
@@ -125,7 +125,7 @@ APLICACIONES = [
     {
         "tag": "✏️ EDITAR", "color": "purple",
         "titulo": "Cuarto Oscuro: la IA revela tu imagen",
-        "imagen": None, "emoji": "✨",
+        "imagen": "3.jpeg", "emoji": "✨",
         "descripcion": "Sube una foto, y la inteligencia artificial la analiza y te describe lo que ve. También puedes hacerle una pregunta específica sobre la imagen.",
         "url": "https://visionapp-iykeb536t9miy7n2z6uzko.streamlit.app/",
         "boton": "Probar aplicación →",
@@ -133,7 +133,7 @@ APLICACIONES = [
     {
         "tag": "✏️ EDITAR", "color": "yellow",
         "titulo": "Bosque de Bocetos: ¡Dibuja y las hadas lo descubren!",
-        "imagen": None, "emoji": "✨",
+        "imagen": "4.jpeg", "emoji": "✨",
         "descripcion": "Dibuja lo que imagines en el lienzo (un personaje, un animal, una criatura mágica) y la inteligencia artificial te cuenta qué ve, qué podría ser y te inventa una pequeña idea mágica sobre tu dibujo.",
         "url": "https://drawrecog-w4qytvxfomj6k3qgfcaxsj.streamlit.app/",
         "boton": "Probar aplicación →",
@@ -141,7 +141,7 @@ APLICACIONES = [
     {
         "tag": "✏️ EDITAR", "color": "purple",
         "titulo": "El Bosque de las Hadas: ¡Dibuja tu hada y descubre quién es!",
-        "imagen": None, "emoji": "✨",
+        "imagen": "5.jpeg", "emoji": "✨",
         "descripcion": "EDibuja un hada en el lienzo, con las alas, colores y detalles que imagines. La inteligencia artificial descubre qué tipo de hada es, cuál es su poder mágico y su detalle especial, y después puede escribir una pequeña historia con ella como protagonista.",
         "url": "https://histinf-hgfjenjsew3xdydvsqfrqo.streamlit.app/",
         "boton": "Probar aplicación →",
@@ -149,7 +149,7 @@ APLICACIONES = [
     {
         "tag": "✏️ EDITAR", "color": "yellow",
         "titulo": "Radar de Señales: ¡Capta los datos de tu sensor!",
-        "imagen": None, "emoji": "✨",
+        "imagen": "6.jpeg", "emoji": "✨",
         "descripcion": "Conéctate a un broker MQTT, escucha el tópico de tu sensor y mira en pantalla el mensaje más reciente, con cada valor en su propia tarjeta.",
         "url": "https://atr7oygwrkjvfn7h8gk43c.streamlit.app/",
         "boton": "Probar aplicación →",
@@ -157,7 +157,7 @@ APLICACIONES = [
     {
         "tag": "✏️ EDITAR", "color": "purple",
         "titulo": "Lulo Lab",
-        "imagen": None, "emoji": "✨",
+        "imagen": "7.jpeg", "emoji": "✨",
         "descripcion": "Desde aquí puedes encender y apagar tu actuador y enviar un valor analógico (0 a 100) con el deslizador, todo en tiempo real a través de MQTT.",
         "url": "https://se67mlbaa3gxrawjyxi7yt.streamlit.app/",
         "boton": "Probar aplicación →",
@@ -165,7 +165,7 @@ APLICACIONES = [
     {
         "tag": "✏️ EDITAR", "color": "yellow",
         "titulo": "Comando Neón",
-        "imagen": None, "emoji": "✨",
+        "imagen": "8.jpeg", "emoji": "✨",
         "descripcion": "Habla y tu voz se convierte en una orden: el texto que dictes se envía al instante a tus dispositivos por MQTT.",
         "url": "https://ctrlvoice-wua8ussmp2nfiex3vathcn.streamlit.app/",
         "boton": "Probar aplicación →",
