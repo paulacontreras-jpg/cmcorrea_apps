@@ -124,10 +124,10 @@ APLICACIONES = [
     },
     {
         "tag": "✏️ EDITAR", "color": "purple",
-        "titulo": "EDITAR: Título 13",
+        "titulo": "Cuarto Oscuro: la IA revela tu imagen",
         "imagen": None, "emoji": "✨",
-        "descripcion": "EDITAR: escribe aquí la descripción de la aplicación.",
-        "url": "https://",
+        "descripcion": "Sube una foto, y la inteligencia artificial la analiza y te describe lo que ve. También puedes hacerle una pregunta específica sobre la imagen.",
+        "url": "https://visionapp-iykeb536t9miy7n2z6uzko.streamlit.app/",
         "boton": "Probar aplicación →",
     },
     {
